@@ -1,0 +1,12 @@
+{
+    "languageList": [
+        {
+            "name": "Clang",
+            "question": ["Dennis Ritchieよって開発されましたか？"]
+        },
+        {
+            "name": "C++",
+            "question": ["Bjarne Stroustrupによって開発されましたか？"]
+        }
+    ]
+}
