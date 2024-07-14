@@ -1,18 +1,7 @@
 use std::{error::Error, fs::File, io::BufReader, path::Path};
-use serde::{Deserialize, Serialize};
-
-#[derive(Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct Language{
-    name: String,
-    question: Vec<String>
-}
-
-#[derive(Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct DB {
-    language_list: Vec<Language>
-}
+use std::io::{stdin, stdout, Write};
+mod domain;
+use crate::domain::lang::DB;
 
 fn load_json<P: AsRef<Path>>(path: P) -> Result<DB, Box<dyn Error>> {
     let file = File::open(path)?; 
@@ -21,14 +10,24 @@ fn load_json<P: AsRef<Path>>(path: P) -> Result<DB, Box<dyn Error>> {
     Ok(db)
 }
 
+fn input() -> i32 {
+    let mut input = String::new();
+    stdin().read_line(&mut input).unwrap();
+    input.trim().parse().unwrap()
+}
+
 fn main() {
     // jsonファイルからプログラミング言語情報を取り出す
     const FILEPATH: &str= "./src/language.json";
 
+    // 問題番号を決める
+    let qnum = 1;
+
+    // 問題を出力
     match load_json(FILEPATH) {
         Ok(db) => {
-            println!("name: {}", db.language_list[1].name);
-            for q in db.language_list[1].question.iter() {
+            println!("name: {}", db.language_list[qnum].name);
+            for q in db.language_list[qnum].question.iter() {
                 println!("question: {}", q);
             }
         },
@@ -36,4 +35,12 @@ fn main() {
             println!("Error: {}", err);
         }
     }
+
+    // 標準入力を受け取る
+    print!(">> ");
+    stdout().flush().unwrap(); 
+    let ans = input();
+
+    // 最終結果を出力
+    println!("Your answer: {}", ans);
 }
