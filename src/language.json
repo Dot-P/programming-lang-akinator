@@ -2,11 +2,38 @@
     "languageList": [
         {
             "name": "Clang",
-            "question": ["Dennis Ritchieよって開発されましたか？"]
+            "answer": ["No", "Yes", "No", "Yes", "No", "No", "Yes", "Yes", "No"]
         },
         {
             "name": "C++",
-            "question": ["Bjarne Stroustrupによって開発されましたか？"]
+            "answer": ["No", "No", "No", "Yes", "No", "Yes", "Yes", "Yes", "No"]
+        },
+        {
+            "name": "Go",
+            "answer": ["No", "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "No"]
+        },
+        {
+            "name": "Rust",
+            "answer": ["No", "Yes", "Yes", "Yes", "No", "Yes", "No", "Yes", "No"]
+        },
+        {
+            "name": "Python",
+            "answer": ["Yes", "No", "Yes", "No", "Yes", "Yes", "No", "No", "Yes"]
+        },
+        {
+            "name": "JavaScript",
+            "answer": ["Yes", "No", "Yes", "No", "Yes", "Yes", "No", "No", "Yes"]
         }
+    ],
+    "questionList": [
+        "この言語は主にウェブ開発に使われますか？",
+        "この言語は2000年以降に開発されましたか？",
+        "この言語は関数型プログラミングをサポートしていますか？",
+        "この言語はコンパイル言語ですか",
+        "インタプリタ言語ですか？",
+        "この言語はオブジェクト指向プログラミングをサポートしていますか？",
+        "この言語のシンタックスはC言語に似ていますか？",
+        "この言語は静的型付け言語ですか？",
+        "この言語は動的型付け言語ですか？"
     ]
 }
