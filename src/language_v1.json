@@ -1,0 +1,110 @@
+{
+    "languageList": [
+        {
+            "name": "Rust",
+            "answer": ["Yes", "No", "No", "Yes", "Yes", "Yes", "No", "Yes", "No", "Yes", "No", "No", "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "Yes"]
+        },      
+        {
+            "name": "Python",
+            "answer": ["No", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "Yes", "No", "No", "Yes", "Yes"]
+        },
+        {
+            "name": "JavaScript",
+            "answer": ["No", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No", "No", "No", "Yes", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No"]
+        },        
+        {
+            "name": "Java",
+            "answer": ["Yes", "No", "Yes", "Yes", "Yes", "No", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "C++",
+            "answer": ["Yes", "No", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "Yes", "No", "No", "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "Yes"]
+        },        
+        {
+            "name": "Ruby",
+            "answer": ["No", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "Yes", "No", "No", "No", "No", "No", "Yes", "No"]
+        },        
+        {
+            "name": "Swift",
+            "answer": ["Yes", "No", "Yes", "Yes", "Yes", "No", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"]
+        },        
+        {
+            "name": "Kotlin",
+            "answer": ["Yes", "No", "Yes", "Yes", "Yes", "No", "No", "Yes", "No", "Yes", "No", "No", "Yes", "No", "No", "No", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "PHP",
+            "answer": ["No", "No", "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "No", "No", "No", "No", "No", "No", "No"]
+        },        
+        {
+            "name": "TypeScript",
+            "answer": ["Yes", "No", "Yes", "Yes", "Yes", "No", "Yes", "No", "No", "Yes", "No", "Yes", "Yes", "No", "No", "No", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "Go",
+            "answer": ["Yes", "No", "Yes", "No", "No", "Yes", "No", "Yes", "No", "Yes", "No", "No", "No", "Yes", "No", "No", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "C#",
+            "answer": ["Yes", "No", "Yes", "Yes", "No", "No", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "No", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "Dart",
+            "answer": ["No", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "Yes", "No", "No", "Yes", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "Scala",
+            "answer": ["Yes", "No", "Yes", "Yes", "Yes", "No", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "R",
+            "answer": ["No", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "No", "No", "Yes", "Yes", "No", "No", "No", "No"]
+        },        
+        {
+            "name": "Haskell",
+            "answer": ["Yes", "Yes", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "No", "No", "No", "No", "No", "Yes", "No", "Yes", "Yes", "No"]
+        },        
+        {
+            "name": "Perl",
+            "answer": ["No", "Yes", "No", "Yes", "Yes", "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "No", "No", "No", "Yes", "No", "No", "No", "No"]
+        },        
+        {
+            "name": "Lua",
+            "answer": ["No", "Yes", "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "Yes", "No", "No", "No", "Yes", "No", "No", "No"]
+        },        
+        {
+            "name": "MATLAB",
+            "answer": ["No", "Yes", "Yes", "No", "No", "No", "No", "No", "Yes", "No", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "No", "Yes", "No"]
+        },        
+        {
+            "name": "Julia",
+            "answer": ["Yes", "No", "Yes", "Yes", "Yes", "No", "No", "Yes", "No", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes", "No", "Yes", "No", "Yes"]
+        },
+        {
+            "name": "C",
+            "answer": ["Yes", "No", "No", "No", "No", "Yes", "No", "Yes", "Yes", "No", "No", "No", "No", "Yes", "No", "No", "Yes", "Yes", "Yes", "Yes"]
+        }        
+    ],
+    "questionList": [
+        "この言語は静的型付けですか？",
+        "この言語はインタプリタ言語ですか？",
+        "この言語はガベージコレクションを使用しますか？",
+        "この言語はオブジェクト指向をサポートしていますか？",
+        "この言語は関数型プログラミングをサポートしていますか？",
+        "この言語はシステムプログラミング向けですか？",
+        "この言語はスクリプト言語ですか？",
+        "この言語は並行プログラミングをサポートしていますか？",
+        "この言語はメモリ管理が手動ですか？",
+        "この言語はマルチパラダイムをサポートしていますか？",
+        "この言語は動的型付けですか？",
+        "この言語はWeb開発向けですか？",
+        "この言語はスマートフォンアプリ開発に適していますか？",
+        "この言語は低レベルなハードウェア操作が可能ですか？",
+        "この言語はAI開発に広く使用されていますか？",
+        "この言語はデータサイエンスで使われますか？",
+        "この言語はゲーム開発に適していますか？",
+        "この言語は安全性を重視していますか？",
+        "この言語は大規模システム開発に適していますか？",
+        "この言語はリアルタイム処理に適していますか？"
+    ]
+}

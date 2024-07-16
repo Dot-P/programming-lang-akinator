@@ -16,9 +16,45 @@ fn input() -> i32 {
     input.trim().parse().unwrap()
 }
 
+fn shanon_entropy(p: Vec<f32>) -> f32 {
+    let mut h = 0.0;
+    for i in 0..p.len(){
+        h += p[i] * p[i].log2();
+    }
+    -h
+}
+
+fn argmax<T: PartialOrd>(slice: &[T]) -> Option<usize> {
+    if slice.is_empty() {
+        return None;
+    }
+    let mut max_index = 0;
+    for (i, item) in slice.iter().enumerate() {
+        if item > &slice[max_index] {
+            max_index = i;
+        }
+    }
+    Some(max_index)
+}
+
+fn calculate_question_entropy(db: &DB, p_lang: &Vec<f32>, question_index: usize) -> f32 {
+    let mut yes_prob = 0.0;
+    let mut no_prob = 0.0;
+
+    for (i, lang) in db.language_list.iter().enumerate() {
+        if db.language_list[i].answer[question_index] == "Yes" {
+            yes_prob += p_lang[i];
+        } else if db.language_list[i].answer[question_index] == "No" {
+            no_prob += p_lang[i];
+        }
+    }
+
+    shanon_entropy(vec![yes_prob, no_prob])
+}
+
 fn main() {
     // jsonファイルからプログラミング言語情報を取り出す
-    const FILEPATH: &str= "./src/language.json";
+    const FILEPATH: &str= "./src/language_v1.json";
 
     let db = match load_json(FILEPATH) {
         Ok(db) => db,
@@ -48,7 +84,7 @@ fn main() {
         stdout().flush().unwrap(); 
         let input: i32 = input();
 
-        // 答えをもとに言語の候補を絞る(todo)
+        // 答えをもとに言語の候補を絞る
         let alpha :f32  = match input {
             1 => 1.0,
             2 => 0.5,
@@ -83,7 +119,7 @@ fn main() {
         }
         for j in 0..total_language{
             p_lang[j] = tmp[j] / tmp.iter().sum::<f32>();
-            if p_lang[j] > 0.8 {
+            if p_lang[j] > 1.0 / total_language as f32 * 2.0{
                 println!("あなたが思い浮かべているのは {} ですか？", db.language_list[j].name);
                 std::process::exit(0);
             }
@@ -94,8 +130,12 @@ fn main() {
             println!("{}: {}", db.language_list[j].name, p_lang[j]);
         }
 
-        // 回答から次の問題番号を決める(todo)
-        qnum = i;
+        // 次の質問を計算
+        let mut question_entropies = vec![0.0; total_question];
+        for q in 0..total_question {
+            question_entropies[q] = calculate_question_entropy(&db, &p_lang, q);
+        }
+        qnum = argmax(&question_entropies).unwrap();
     }
 
     // 最も確率が高い言語を表示
